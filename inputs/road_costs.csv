@@ -1,0 +1,6 @@
+road_type,country_type,cost,lifetime,average_age
+primary,,1200000,20,8
+secondary,,700000,15,5
+tertiary,,600000,10,5
+track,,600000,5,5
+other,,500000,10,5
