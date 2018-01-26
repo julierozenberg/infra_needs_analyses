@@ -4,7 +4,7 @@ import prim
 import seaborn as sns
 from sklearn import mixture
 
-def clustering(n_clusters,data,xstring,ystring):
+def clustering(n_clusters,data,xstring,ystring,data_norm):
     g = mixture.GaussianMixture(n_components=n_clusters)
     g.fit(data_norm)
     pred = g.predict(data_norm)+1
@@ -22,9 +22,9 @@ def clustering(n_clusters,data,xstring,ystring):
     
     return df
     
-def get_prim(n_clusters, f_value,data,xstring,ystring,inputs):
+def get_prim(n_clusters, f_value,data,xstring,ystring,inputs,data_norm):
     
-    df = clustering(n_clusters,data,xstring,ystring)
+    df = clustering(n_clusters,data,xstring,ystring,data_norm)
     classes = df[['class']].drop_duplicates()['class']
     list_prim =[]
     sorted(classes)
