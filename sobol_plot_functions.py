@@ -4,6 +4,7 @@ from SALib.util import read_param_file
 from rhodium import *
 from rhodium.config import RhodiumConfig
 from platypus import MapEvaluator
+
   
 def get_pretty_result(result, problem):
     pretty_result = SAResult(result["names"] if "names" in result else problem["names"])
